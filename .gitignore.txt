@@ -1,0 +1,24 @@
+# Raw data files — too large for GitHub
+data/raw/user_logs.csv
+data/raw/user_logs_v2.csv
+data/processed/user_logs_train_users.parquet
+
+# Model files — too large for GitHub
+models/lgbm_churn.pkl
+models/shap_results.pkl
+
+# Processed data — rebuild from pipeline
+data/processed/master.parquet
+data/processed/log_features.parquet
+data/processed/scored_customers.parquet
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# Environment
+.env
+venv/
+*.egg-info/
