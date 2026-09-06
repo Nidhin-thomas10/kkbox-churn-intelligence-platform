@@ -474,8 +474,7 @@ elif section == "What-If Simulator":
         avg_completion   = st.slider("Avg Song Completion %", 0.0, 1.0, 0.7, 0.05)
         days_since_reg   = st.slider("Days Since Registration", 30, 5000, 1000, 30)
 
-    # Build a feature row matching the 55-feature schema
-    # Fill with dataset medians for features not in the simulator
+    
     X_median = X_all.median().to_dict()
 
     sim_overrides = {
