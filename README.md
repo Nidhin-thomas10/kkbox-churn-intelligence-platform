@@ -74,7 +74,7 @@ Data must be downloaded from the KKBox Churn Prediction Challenge on Kaggle and 
 LightGBM handles large datasets faster, supports native class imbalance weighting via scale_pos_weight, and produces SHAP values natively. Random Forest on 970k rows would be significantly slower with no accuracy benefit.
 
 **Why streaming accumulator for log processing?**
-The user_logs.csv file is 30GB. Standard pandas read_csv on 8GB RAM fails. A pure Python csv.DictReader accumulator processes the file row by row, updating per-user statistics in place, keeping peak RAM under 2GB.
+The user_logs.csv file is 30GB. Standard pandas read_csv on 16GB RAM fails. A pure Python csv.DictReader accumulator processes the file row by row, updating per-user statistics in place, keeping peak RAM under 2GB.
 
 **Why AUC-PR as primary metric?**
 On a 91:9 imbalanced dataset, a naive model achieves 91% accuracy and 0.5 AUC-ROC by predicting all non-churn. AUC-PR penalises this correctly — random performance is 0.09, our model achieves 0.9537.
