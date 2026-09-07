@@ -22,3 +22,5 @@ __pycache__/
 .env
 venv/
 *.egg-info/
+
+reports/scored_customers.parquet
