@@ -68,6 +68,9 @@ streamlit run app.py
 
 Data must be downloaded from the KKBox Churn Prediction Challenge on Kaggle and placed in `data/raw/`.
 
+## Plots
+See [`reports/`](./reports/) for evaluation charts, SHAP summary, and feature importance plots.
+
 ## Technical Decisions
 
 **Why LightGBM over Random Forest?**
